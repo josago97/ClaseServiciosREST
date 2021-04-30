@@ -1,0 +1,76 @@
+﻿@using Common
+
+@{
+    UserProfile user = ViewBag.User;
+    MessageResponse[] messages = ViewBag.Messages;
+}
+
+<div class="api-url">
+    API: <a href="@ApiService.API_URL">@ApiService.API_URL</a>
+</div>
+
+@if (user != null)
+{
+    <head>
+        <link rel="stylesheet" type="text/css" href="~/css/index.css">
+        <title>@user.Nickname</title>
+    </head>
+
+
+    <body>
+        <div class="div-profile">
+            <div class="div-profile">
+                <img class="image-profile" src=@user.Image />
+            </div>
+            <div>
+                <h2>@user.Name</h2>
+                <h3>@user.Nickname</h3>
+                <h4>@user.Description</h4>
+            </div>
+        </div>
+
+        <br />
+        <div class="div-message-list">Mensajes</div>
+        <br />
+
+        <div>
+            @foreach (var msg in messages)
+            {
+            <div class="div-message">
+                <div class="message-author">@msg.Author</div>
+
+                @if (!string.IsNullOrEmpty(msg.Text))
+                {
+                    <br />
+                    <div>@msg.Text</div>
+                }
+
+                @if (msg.Image != null)
+                {
+                    <br />
+                    <img class="message-image" src="@msg.Image" />
+                }
+
+                <div class="message-footer">
+                    <div class="message-id">
+                        Id: @msg.Id
+                    </div>
+
+                    <div class="message-date">
+                        @if (msg.EditedTime != null)
+                        {
+                            <span>(Editado)</span>
+                        }
+
+                        @msg.CreatedTime.ToString("H:mm d/M/yy")
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </body>
+}
+else
+{
+    <h1>Falta configurar las credenciales</h1>
+}

@@ -1,0 +1,87 @@
+﻿body {
+    padding: 10px;
+}
+
+.api-url {
+    font-size: 15px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.div-profile {
+    vertical-align: top;
+}
+
+.div-profile div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.image-profile {
+    height: 200px;
+    border: 5px solid;
+    border-color:lightgreen;
+    border-radius: 10px;
+}
+
+.div-message-list {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.div-message {
+    display: table;
+    background-color: lightcyan;
+    border: 3px solid;
+    border-color: cornflowerblue;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.div-message br {
+    font-size: 10px;
+}
+
+.message-author {
+    color: navy;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.message-image {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.message-footer {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.message-id {
+    text-align: left;
+    margin-right: 20px;
+}
+
+.message-date {
+    text-align: right;
+}
+
+/*.message-footer {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-id {
+    float: left;
+}
+
+.message-date {
+    float: left;
+}*/
