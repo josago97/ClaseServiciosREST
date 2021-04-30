@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <form id="form" action="" onsubmit="calculate();return false;">
+        <select id="operations" name="operation"></select>
+        <input type="text" name="expression"/>
+        <button>Calcular</button>
+    </form>
+    <br/>
+    <br/>
+    <div>
+        Resultado:
+        <span id="result"></span>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
